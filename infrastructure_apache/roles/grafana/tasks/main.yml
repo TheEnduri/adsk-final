@@ -1,0 +1,14 @@
+- name: "Install yum package of grafana rpm"
+  yum:
+    name: "{{rpm_grafana}}"
+
+- name: "Move cfg to dest path"
+  template:
+    src: grafana.ini
+    dest: /etc/grafana/grafana.ini
+
+- name: "Setup start of service grafana"
+  service:
+    name: grafana-server
+    state: started 
+    enabled: yes

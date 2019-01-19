@@ -1,0 +1,17 @@
+---
+- name: "Adding a repository"
+  yum:
+    name: "{{repo_mysql}}"
+    state: present
+    
+- name: "Install all packages"
+  yum:
+    name: "{{packages}}"
+    state: present
+    
+- name: "Start db"
+  service:
+    name: mysqld
+    state: started
+    enabled: yes
+    

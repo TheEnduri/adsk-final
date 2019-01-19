@@ -1,0 +1,9 @@
+---
+  repo_mysql: http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+  packages:
+      - httpd
+      - mysql
+      - mysql-server
+      - php
+      - php-mysql
+      - MySQL-python
